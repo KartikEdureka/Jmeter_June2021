@@ -1,0 +1,79 @@
+Bean Shell Script ?
+
+
+- Scripting language developed in java
+- loose type
+variables are declared without any data types
+
+
+To customize our scripts
+- BeanShell Sampler
+- bean Shell Pre processor
+- beanshell post processor
+
+
+
+
+vars.put("link","www.google.com");------> to set the value of variable
+
+var x = vars.get("link"); ----> getting values from a variable
+
+log.info("value of x is" +x); -----> print the value in log
+
+
+ctx.getThread().getThreadName();----> get thread name
+
+
+
+
+
+Distribution of env
+
+Prerequisite
+
+- Jmeter should be installed on master and slave 
+- maintain same folder structure
+- java installation on master and slave same version
+- Machines should be on same network
+
+
+
+
+- Jmeter.properties file
+- search for "Remote hosts and RMI configuration"
+- include IP address of slave machines in remote_host for eg. remote_hosts=192.168.1.9,192.168.1.8,192.168.1.7
+- Click on create-rmi-keystore.bat for generation of key
+- enter all the credentials ,fill form 
+- rmi_keystore.jks file will get generated for authentication
+- copy keystore.jks file in all slave machine
+- restart jmeter in master machine
+
+
+
+
+Total Load =1000
+
+
+Slave 1  = 500
+slave 2 = 300
+slave 3 = 200
+
+
+
+
+Execute Jmeter test case using NON GUI mode
+
+jmeter -n -t sript.jmx -l
+
+
+
+
+
+
+
+
+
+
+
+
+
